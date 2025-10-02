@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<servicePassword value="catmandu"/>
+	<originCity code="BOG"/>
+	<country code="CO"/>
+	<cultureInfo culture="es-CO" />
+	<dateSeparator separator="-"/>
+	<numberSeparator decimal="," miles="."/>
+	<DefaultRequestSettingsValues BranchCode="" BusinessUnitCode="" SalesChannelCode=""/>
+	<searchInCatmandu enabled="true"/>
+	<showFiscalResponsabilities enabled="true"/>
+	<confirmReservationsBeforePayment enabled="true" groupId=""/>
+	<ShowAddInfoShopperPayment enabled="true"/>
+	<!-- esto indica que la busqueda se debe hacer en los motores viejos NB, NBH, NBE -->
+	<searchSeniors enabled="true"/>
+	<!-- esto indica que en el motor de busqueda agrega los seniors en las opciones -->
+	<showAddNewItemsPackage enabled="true"/>
+	<!-- esto indica si se pueden o no agregar mas reservas a un itinerario. True: permite agregar | False: no permite agregar -->
+	<showConfirmButton enabled="true"/>
+	<attachPdfsToVoucher enabled="true"/>
+	<AirImporter enabled="true"/>
+	<ShowSaveCCTokenex enabled="false"/>
+	<!-- esto indica que va a mostrar el checkbox para guardar la tarjeta tokenizada -->
+	<!--ESPANOL / PORTUGUES-->
+	<dates>
+		<date formatName="LongDateFormat" regularExpression="^(((((0[1-9])|(1\d)|(2[0-8]))(\-|\/)((0[1-9])|(1[0-2])))|((31(\-|/)((0[13578])|(1[02])))|((29|30)(\-|\/)((0[1,3-9])|(1[0-2])))))(\-|\/)((20[0-9][0-9])|(19[0-9][0-9])))|((29(\-|\/)02(\-|\/)(19|20)(([02468][048])|([13579][26]))))$" validationFormat="dd-MM-yyyy"/>
+		<date formatName="ShortDateFormat" regularExpression="" validationFormat="dd-MM"/>
+		<date formatName="LongDateTimeFormat" regularExpression="" validationFormat="HH:mm dd-MM-yyyy"/>
+		<date formatName="ShortDateTimeFormat" regularExpression="" validationFormat="HH:mm dd-MM"/>
+		<date formatName="ShortTimeFormat" regularExpression="" validationFormat="HH:mm"/>
+		<date formatName="MonthYearFormat" regularExpression="" validationFormat="MM-yy"/>
+		<date formatName="JsDateFormat" regularExpression="" validationFormat="dd-MM-yy"/>
+	</dates>
+	<!--INGLES
+  <dates><date formatName="LongDateFormat" validationFormat="MM/dd/yyyy" regularExpression="^(((((0[1-9])|(1[0-2]))\/((0[1-9])|(1\d)|(2[0-8])))|((((0[13578])|(1[02]))\/31)|(((0[1,3-9])|(1[0-2]))\/(29|30))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((02\/29\/(19|20)(([02468][048])|([13579][26]))))$" /><date formatName="ShortDateFormat" validationFormat="MM/dd" regularExpression="" /><date formatName="LongDateTimeFormat" validationFormat="HH:mm MM/dd/yyyy" regularExpression="" /><date formatName="ShortDateTimeFormat" validationFormat="HH:mm MM/dd" regularExpression="" /><date formatName="ShortTimeFormat" validationFormat="HH:mm" regularExpression="" /><date formatName="MonthYearFormat" validationFormat="MM/yy" regularExpression="" /><date formatName="JsDateFormat" validationFormat="MM/dd/yy" regularExpression="" /></dates>-->
+	<identifications>
+		<identification clientValidation="false" name="Cedula Identidad" serverValidation="false" type="Id"/>
+		<identification clientValidation="false" name="Pasaporte" serverValidation="false" type="Passport"/>
+	</identifications>
+	<currencies>
+		<currency code="COP" decimals="0" display="true" format="#,#.####" roundingType="MidPointRounding" type="international"/>
+		<currency code="COP" decimals="0" display="true" format="#,#.####" roundingType="MidPointRounding" type="Domestic"/>
+		<currency code="COP" decimals="0" display="true" format="#,#.####" roundingType="MidPointRounding" type="local"/>
+		<currency code="USD" decimals="2" display="true" format="#,#.####" roundingType="MidPointRounding" type="other"/>
+	</currencies>
+	<LogMessages>
+		<!--ruta del logging de mensajes con el Core -->
+		<logMessagesPath value="E:\Testing\Logs\"/>
+		<!--habilita o desabilita el logging de mensajes con el Core-->
+		<logMessagesEnable value="true"/>
+	</LogMessages>
+	<CMSSettings>
+		<uriHTMLResourcesFolder value="E:\Testing\Headers\"/>
+	</CMSSettings>
+	<SimpleConfigs>
+		<SimpleConfig Name="ConfigAllProducts">
+			<!-- CERTIFICATIONS -->
+			<Certifications usedCertification="Veraz">
+				<Veraz>
+					<Matrix value="C13593"/>
+					<User value="ADH"/>
+					<Password value="201233233237231"/>
+					<BranchOffice value="0"/>
+					<Sector value="ID"/>
+				</Veraz>
+			</Certifications>
+			<!-- PAYMENT FORMS -->
+			<Cash enabled="true" enabledIssue="false" groupId=""/>
+			<Check enabled="true" enabledIssue="false" groupId=""/>
+			<DebitCard enabled="true" enabledIssue="false" groupId=""/>
+			<CreditCard enabled="true" enabledIssue="false" groupId="">
+				<CreditCardTypes types="Visa, MasterCard, Diners, Amex"/>
+				<CreditCardLimit currencyCode="USD" enabled="true" value="100000"/>
+				<ValidateCardOwner enabled="false"/>
+			</CreditCard>
+			<LoyaltyPoints allowMixedPayment="true" enabled="false" groupId=""/>
+			<LineOfCredit enabled="true" groupId=""/>
+			<OnlinePayment LoggedUserGroupId="" enabled="true" groupId=""/>
+			<PayPalPaymentForm enabled="true" groupId="">
+				<UserName value="jbotti_1256686459_biz_api1.netactica.com"/>
+				<Password value="1256686470"/>
+				<Signature value="AQZrmm9EGOXdoKJqxem.u6XvD-0VAKR1x3j7mfENUkwsCkVIRLe3X1yN"/>
+				<Enviroment value="sandbox"/>
+				<PayPalUrl value="https://sandbox.paypal.com/cgi-bin/webscr"/>
+				<Version value="2.0"/>
+				<ApiUrl value="https://api-3t.sandbox.paypal.com/2.0/"/>
+			</PayPalPaymentForm>
+
+			<!-- GATEWAYS -->
+			<DebitCardPaymentGateways usedGateway="PlaceToPay">
+				<PlaceToPay>
+					<LoginID value="7963a240278d7d0ca275204b6ad739fd" />
+					<TransactionalKey value="mVly60nLf29vX5D8" />
+					<DocumentMapping value="4325=CC,4330=CE,4324=PPN"/>
+					<RedirectPaymentUrl value="https://checkout-test.placetopay.com/api/session/" />
+					<ValidatePaymentUrl value="http://p2ptest.netactica.net/placetopay.asmx" />
+					<NotificationMethod value="false"/>
+					<!--<PaymentMethods value="_PSE_,TY_EX,_ATH_" /> -->
+					<MinsToCancel value = "25" />
+				</PlaceToPay>
+				<SafetyPay>
+					<ApiKey value="cc86f07b1f84054bcc877653d0780019"/>
+					<SignatureKey value="b229848c559474db3599a13018954d88"/>
+					<MaxExpirationTime value="120"/>
+					<ServiceUrl value="https://sandbox-mws2.safetypay.com/express/ws/v.3.0/"/>
+				</SafetyPay>
+			</DebitCardPaymentGateways>
+
+			<PaymentGateways usedGateway="PayULatam">
+				<PlaceToPay>
+					<!--<TestRequest value="true" />
+					<LoginID value="35ff5024ef769e3d219f021be3ded6a5" />
+					<DocumentMapping value="4325=CC,4330=CE,4440=NIT"/>
+					<PaymentUrl value="https://test.placetopay.com/gateway/paymentdirect.php" />
+					<ValidatePaymentUrl value="https://www.placetopay.com/soap/placetopay"
+					<ValidatePaymentUrl value="https://test.placetopay.com/soap/placetopay/" />
+					<TransactionalKey value="CfXg0335" />
+					<Version value="2.0" />
+					<Tokenization value="true"/>-->
+					<TestRequest value="true" />/
+					<LoginID value="35ff5024ef769e3d219f021be3ded6a5" />
+					<PaymentUrl value="https://test.placetopay.com/gateway/paymentdirect.php" />
+					<ValidatePaymentUrl value="https://test.placetopay.com/soap/placetopay/" />
+					<TransactionalKey value="CfXg0335" />
+					<FormatSeed value="yyyy-MM-ddTHH:mm:ss" />
+					<Version value="2.0" />
+					<DocumentMapping value="4325=CC,4330=CE,4440=NIT"/>
+					<VATPercentage value="19.2"/>
+					<APIIntegration value="true"/>
+					<Validate3DS value="false"/>
+					<SecretKey value="CfXg0335" />
+					<TimeZone value="SA Pacific Standard Time" />
+					<LookupUrl value="https://test.placetopay.com/rest/gateway/mpi/lookup"/>
+					<QueryUrl value="https://test.placetopay.com/rest/gateway/mpi/query"/>
+					<ProcessUrl value="https://test.placetopay.com/rest/gateway/process"/>
+					<SearchUrl value="https://test.placetopay.com/rest/gateway/search"/>
+					<InformationUrl value="https://test.placetopay.com/rest/gateway/information"/>
+				</PlaceToPay>
+				<PayULatam>
+				  <Test value="true"/>
+				  <Language value="es"/>
+				  <ApiKey value="c15c00f0690"/>
+				  <ApiLogin value="b93l32leuswhsJ0"/>
+				  <Url value="https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi"/>
+				  <UrlAirlines value="https://sandbox.api.payulatam.com/payments-api/rest/v4.3/payments/airline"/>
+				  <UrlReport value=" https://sandbox.api.payulatam.com/reports-api/4.0/service.cgi"/>
+				  <AccountId value="114504"/>
+                  <MerchantId value="110460"/>
+				  <UrlNotification value ="https://localhost:10009"/>
+				</PayULatam>
+				<DeUna>
+					<UrlBase value="https://api.sandbox.deuna.io"/>
+					<OrderType value="DEUNA_NOW"/>
+					<StoreCode value="all"/>
+					<XApiKey value="2ef826b8577801f94c3a451412d44a701f53d5a62131d271edf48fd27d10630b47f2ed13daf83d4bd1c076bfbd2fab52e85be8453438bc1b343e2235b748"/>
+					<UrlOrderToken value="/merchants/orders"/>
+					<UrlPurchase value="/v2/merchants/orders/purchase"/>
+					<UrlInstallments value="/merchants/transactions/orders/{0}/installments"/>
+					<DeviceId value="Netactica"/>
+					<ProcessorName value="stripe_direct"/>
+				</DeUna>
+				<!--<MercadoPago>
+					<PublicKey value="TEST-5b91437d-1039-4a03-84ff-7ef22ed884cd"/>
+					<Accesstoken value="TEST-4549171896108767-022210-20cc767f43cdac1cecee5fff750620dd-407281472"/>
+					<ProcessingMode value="aggregator"/>
+					<UrlMPScript value="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"/>
+					<DocumentTypeMapping value="DN1=DNI,ID=PASS"/>
+					<GatewayUrlNotification value="https://certificacion.netactica.com/NetFulfillment/MercadoPagoPost.aspx"/>
+				</MercadoPago>-->
+				<MercadoPago>
+					<PublicKey value="TEST-cee277a6-17d7-45e8-8233-107ad55d0820"/>
+					<Accesstoken value="TEST-724995715117500-020118-a9179d428be0ed51f0ee0d7c29193194-1078676739"/>
+					<UrlMPScript value="https://sdk.mercadopago.com/js/v2"/>
+					<DocumentTypeMapping value="PASSPORT=Otro,ID=CC,DN1=NIT,DN2=CE" />
+					<GatewayUrlNotification value="https://preprod.netactica.com/Netfulfillment/MercadoPagoPost.aspx" />
+					<ProcessingMode value="aggregator" />
+					<CoefficientAdd value="false"/>
+					<NotRequestTypeAndDocumentNumber value="true" />
+					<Platform-Id value="dev_43bdd050d96b11edb6c1ce63e5c2ac99" />
+				</MercadoPago>
+			</PaymentGateways>
+
+			<OnlinePaymentGateways usedGateway="MercadoPago">
+				<BitPay>
+				  <Url value="https://test.bitpay.com"/>
+					<NotificationURL value="https://preprod.netactica.net/NetFulfillment/BitPayPOST.aspx" />
+					<Token value="91yaD1KK7JpXxCmFJ4JnrBA2EAeqwvne5MDbHvnsy9ZX"/>
+					<!-- Solo para usar en la sonda -->
+					<MinsToCancel value="100"/>
+					<!-- TransactionSpeed accepted values: high, medium or low -->
+					<TransactionSpeed value="high"/>
+				</BitPay>
+				<!--<MercadoPago>
+					<ClientId value="8901515261854964"/>
+					<ClientSecret value="8PeYIok3bd1bThzvtcX1N465mwj0d1Ok"/>
+					<ShortName value="mp-app-252226253"/>
+					<IsTest value="false"/>
+					<UrlSuccess value=""/>
+					<UrlPending value=""/>
+					<Urlfailure value=""/>
+					<SponsorID value=""/>
+					<ExcludedPaymentMethods value=""/>
+					<ExcludedPaymentTypes value="ticket"/>
+					<SendExpirationDate value="true"/>
+					<UrlNotification value="https://preprod.netactica.com/NetFulfillment/MercadoPagoPost.aspx"/>
+				</MercadoPago>-->
+				<MercadoPago>
+					<ProcessingMode value="aggregator" />
+					<Accesstoken value="TEST-4685886010249897-061211-8e2b9ec9ddd768872ce9ce43aab3076c-1396832287"/>
+					<ShortName value="mp-app-252226253" />
+					<IsTest value="true" />
+					<UrlSuccess value="" />
+					<UrlPending value="" />
+					<Urlfailure value="" />
+					<SponsorID value="" />
+					<ExcludedPaymentMethods value="" />
+					<ExcludedPaymentTypes value="ticket" />
+					<SendExpirationDate value="true"/>
+					<UrlNotification value="https://preprod.netactica.com/NetFulfillment/MercadoPagoPost.aspx" />
+					<Platform-Id value="dev_43bdd050d96b11edb6c1ce63e5c2ac99" />
+				</MercadoPago>
+				<Amaszonas>
+					<UserName value="demo"/>
+					<Password value="demo"/>
+					<CompanyCode value="BO12345678"/>
+					<ServiceUrl value="http://desarrollo.amaszonas.com/PagoUniversal/wsNetactica.asmx"/>
+					<RedirectPaymentUrl value="http://desarrollo.amaszonas.com/paginapagospro/"/>
+					<MaxExpirationTime value="120"/>
+				</Amaszonas>
+				<BancoCiudad>
+					<client_id value="commerce"/>
+					<client_secret value="Corp01"/>
+					<idRetailer value="100436"/>
+					<idBank value="160523"/>
+					<idCampaing value="3"/>
+					<url value="https://qa.ccpaysrv.quasarbox.com/"/>
+					<installments value="1,3,6,12,24"/>
+				</BancoCiudad>
+			</OnlinePaymentGateways>
+		</SimpleConfig>
+	</SimpleConfigs>
+	<NetAdmin>
+		<PaymentConfigs DefaultSimpleConfigName="ConfigAllProducts"/>
+		<MailSettings>
+			<smtpClient enableSsl="true" host="smtp.gmail.com" port="587"/>
+			<senderAccount displayName="Netactica" from="infofortest@gmail.com" password="Netactica2016" username="infofortest@gmail.com"/>
+			<receiverAccount to=""/>
+		</MailSettings>
+		<generalSettings>
+			<BillingInformation isobligatory="true" show="true"/>
+			<uriPayments value=""/>
+			<uriPnrRequest value="https://preprod.netactica.com/Netfulfillment/DisplayPNR.aspx"/>
+			<uriHotelReservationRequest value="https://preprod.netactica.com/Netfulfillment/DisplayHotelReservation.aspx"/>
+			<uriHomePage value="https://preprod.netactica.com/Netfulfillment/Login.aspx"/>
+			<!--URL de la p?na principal para redireccionar por ejemplo en GeneralErrorPage.aspx -->
+			<uriContactUs value=""/>
+			<uriAboutUs value=""/>
+			<uriMyReservations value="https://preprod.netactica.com/Netfulfillment/Login.aspx"/>
+			<uriCart value=""/>
+			<uriAirRedirect value=""/>
+			<!--Al final del documento estan los parametros que deben usarse-->
+			<uriHotelRedirect value=""/>
+			<!--Al final del documento estan los parametros que deben usarse-->
+			<showNetSiteMasterPage value="true"/>
+			<!--Master Page de NetSite-->
+			<showPoweredByFooter value="false"/>
+			<!-- Logo y Link de PoweredBy Netactica-->
+			<showCancelButtonInMyReservations value="false"/>
+			<showFeesAlways value="false"/>
+			<!-- True: Show Fees Always. False: Show Fees only when they are distint to zero -->
+			<webServiceCallTimeout value="100000"/>
+			<!-- Indica el tiempo, en milisegundos, que un llamado a Web Service espera a que finalice una solicitud. El valor -1 indica espera infinita (sin timeout). / Indicates the time a Web Service call waits for a request to complete (in milliseconds)-->
+			<airProviderType value="Sabre"/>
+			<!-- Sabre , Amadeus -->
+			<showReferenceCodeInUPayment value="true"/>
+			<showDisplayReservationButtonInUPayment value="true"/>
+			<localImagesUrl value="https://preprod.netactica.com/NetAdmin/"/>
+			<googleMapKey value="ABQIAAAAZXamZq9xxObRIQFyQO6PYBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRvAoqsFPKC2d2lpbAYFeZZEPxn2g"/>
+			<!-- Indica si se debe disparar la emision cuando se paga Offline -->
+			<OfflineCreditCardIssuesAir branchCode="" enabled="false" groupId=""/>
+			<!-- Indica si se debe disparar la emision cuando se paga con Cash -->
+			<cashIssue branchCode="" enabled="true" groupId=""/>
+			<confirmReservationsBeforePayment enabled="false" groupId=""/>
+			<!-- Indica la cantidad maxima de resultados a mostrar cuando se hace una busqueda de itinerarios en MyItineraries -->
+			<maxTravelItineraryResults value="100"/>
+			<facebookAppId value="249689398569718"/>
+			<AutoCompleteShopperInfo value="true"/>
+			<BranchCodeRequired value="false"/>
+			<!--Indica si la sucursal es requerida para hacer una busqueda desde el widget-->
+			<SalesChannelRequired value="false"/>
+			<!--Indica si el canal de venta es requerido para hacer una busqueda desde el widget-->
+			<BusinessUnitRequired value="false"/>
+			<!--Indica si la unidad de negocio es requerida para hacer una busqueda desde el widget-->
+		</generalSettings>
+		<!-- Seccion de configuracion de Notificaciones al Titular de Itinerario-->
+		<ItineraryNotificationSettings showAmounts="true">
+			<sendOnConfirmation value="true"/>
+			<sendOnCancelation value="true"/>
+			<sendOnReservation value="true"/>
+			<sendOnPaymentRequiredNotificationToClients value="false"/>
+			<sendToOperatorsOnReservation value="true"/>
+		</ItineraryNotificationSettings>
+	</NetAdmin>
+	<NetSite>
+		<PaymentConfigs DefaultSimpleConfigName="ConfigAllProducts"/>
+		<MailSettings>
+			<smtpClient enableSsl="true" host="smtp.gmail.com" port="587"/>
+			<senderAccount displayName="Netactica" from="infofortest@gmail.com" password="Netactica2016" username="infofortest@gmail.com"/>
+			<receiverAccount to=""/>
+		</MailSettings>
+		<generalSettings>
+			<BillingInformation isobligatory="true" show="true"/>
+			<uriPayments value=""/>
+			<uriPnrRequest value="https://preprod.netactica.com/Netfulfillment/DisplayPNR.aspx"/>
+			<uriHotelReservationRequest value="https://preprod.netactica.com/Netfulfillment/DisplayHotelReservation.aspx"/>
+			<uriHomePage value="Home.aspx"/>
+			<!--URL de la p?na principal para redireccionar por ejemplo en GeneralErrorPage.aspx -->
+			<uriContactUs value="ContactUs.aspx"/>
+			<uriAboutUs value="AboutUs.aspx"/>
+			<uriMyReservations value="https://preprod.netactica.com/Netfulfillment/Login.aspx"/>
+			<uriCart value=""/>
+			<uriAirRedirect value=""/>
+			<!--Al final del documento estan los parametros que deben usarse-->
+			<uriHotelRedirect value=""/>
+			<!--Al final del documento estan los parametros que deben usarse-->
+			<showNetSiteMasterPage value="true"/>
+			<!--Master Page de NetSite-->
+			<showPoweredByFooter value="true"/>
+			<!-- Logo y Link de PoweredBy Netactica-->
+			<showCancelButtonInMyReservations value="false"/>
+			<showFeesAlways value="false"/>
+			<!-- True: Show Fees Always. False: Show Fees only when they are distint to zero -->
+			<webServiceCallTimeout value="100000"/>
+			<!-- Indica el tiempo, en milisegundos, que un llamado a Web Service espera a que finalice una solicitud. El valor -1 indica espera infinita (sin timeout). / Indicates the time a Web Service call waits for a request to complete (in milliseconds)-->
+			<airProviderType value="Sabre"/>
+			<!-- Sabre , Amadeus -->
+			<showReferenceCodeInUPayment value="true"/>
+			<showDisplayReservationButtonInUPayment value="true"/>
+			<localImagesUrl value="https://preprod.netactica.com/NetAdmin/"/>
+			<googleMapKey value="ABQIAAAAZXamZq9xxObRIQFyQO6PYBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRvAoqsFPKC2d2lpbAYFeZZEPxn2g"/>
+			<!--Key utilizada por el GoogleMapControl-->
+			<!-- Indica si se debe disparar la emision cuando se paga Offline -->
+			<OfflineCreditCardIssuesAir branchCode="" enabled="true" groupId=""/>
+			<!-- Indica si se debe disparar la emision cuando se paga con Cash -->
+			<cashIssue branchCode="" enabled="true" groupId=""/>
+			<confirmReservationsBeforePayment enabled="false" groupId=""/>
+			<!-- Indica la cantidad maxima de resultaos a mostrar cuando se hace una busqueda de itinerarios en MyItineraries -->
+			<maxTravelItineraryResults value="100"/>
+			<facebookAppId value="249689398569718"/>
+			<AutoCompleteShopperInfo value="true"/>
+			<BranchCodeRequired value="false"/>
+			<!--Indica si la sucursal es requerida para hacer una busqueda desde el widget-->
+			<SalesChannelRequired value="false"/>
+			<!--Indica si el canal de venta es requerido para hacer una busqueda desde el widget-->
+			<BusinessUnitRequired value="false"/>
+			<!--Indica si la unidad de negocio es requerida para hacer una busqueda desde el widget-->
+		</generalSettings>
+		<!-- Seccion de configuracion de Notificaciones al Titular de Itinerario-->
+		<ItineraryNotificationSettings showAmounts="true">
+			<sendOnConfirmation value="true"/>
+			<sendOnCancelation value="true"/>
+			<sendOnReservation value="true"/>
+			<sendOnPaymentRequiredNotificationToClients value="true"/>
+			<sendToOperatorsOnReservation value="true"/>
+		</ItineraryNotificationSettings>
+	</NetSite>
+</configuration>
+<!--
+
+AirRedirect
+{0}:CityFrom | {1}: CityTo | {2}: DateFromDay | {3}: DateFromMonth | {4}: DateFromYear | {5}: DateToDay | {6}: DateToMonth | {7}: DateToYear | {8}: NumberOfAdults | {9}: CabinType | {10}: TripType | {11}: FareType | {12}: NumberOfInfants | {13}: NumberOfChildren
+
+HotelRedirect
+{0}:City | {1}: CheckOutDay | {2}: CheckOutMonth | {3}: CheckOutYear | {4}: CheckInDay | {5}: CheckInMonth | {6}: CheckInYear | {7}: NumberOfRooms | {8}: NumberOfAdults | {9}: NumberOfChildren
+
+dd/mm/yyyy
+^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$
+
+mm/dd/yyyy
+^(((((0[1-9])|(1[0-2]))\/((0[1-9])|(1\d)|(2[0-8])))|((((0[13578])|(1[02]))\/31)|(((0[1,3-9])|(1[0-2]))\/(29|30))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((02\/29\/(19|20)(([02468][048])|([13579][26]))))$
+
+dd/mm/yyyy version chilena
+^(((((0[1-9])|(1\d)|(2[0-8]))(\-|\/)((0[1-9])|(1[0-2])))|((31(\-|/)((0[13578])|(1[02])))|((29|30)(\-|\/)((0[1,3-9])|(1[0-2])))))(\-|\/)((20[0-9][0-9])|(19[0-9][0-9])))|((29(\-|\/)02(\-|\/)(19|20)(([02468][048])|([13579][26]))))$
+
+-->

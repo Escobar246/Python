@@ -1,0 +1,177 @@
+{
+    "web_browser": "local",
+    "environment": 2,
+    "case_name": "Reserva afiliados Producto HOTELES tipo BUNDLE, con ocupancia de 5 ADT, 2 CNN y 0 INF, 2 ROOM, SUCURSAL ComfamaHoteles ",
+    "case_code": "TCAH0002",
+    "login": {
+      "user_type": 1,
+      "login_type": 1,
+      "username": "amatista",
+      "password": "Autom@-2",
+      "user_service": "regresion"
+    },
+    "netadmin": [
+      {
+        "admin_rule_business": {},
+        "booking_tree": {
+          "booking_enabled": false,
+          "booking_enabled_new": true
+        }
+      }
+    ],
+    "netfulfillment": [
+      {
+        "admin_nff": {
+          "option_type": 1
+        }
+      }
+    ],
+    "booking": [
+      {
+        "booking_type": {
+          "option_booking_type": 1,
+          "associate_reservation": 3,
+          "product_type": 2,
+          "front_type": 1,
+          "origen": [],
+          "destination": ["BOG"],
+          "date_from": [
+            84
+          ],
+          "time_from": [],
+          "date_to": [
+            86
+          ],
+          "time_to": [],
+          "static_content": false,
+          "affiliated_passengers": true,
+          "affiliated_passengers_data": [
+            {
+              "passenger_type": "ADT",
+              "affiliation_category": "A",
+              "document_number": "71397454",
+              "document_type": "4325"
+            },
+             {
+              "passenger_type": "ADT",
+              "affiliation_category": "C",
+              "document_number": "1017156553",
+              "document_type": "4325"
+            },
+            {
+              "passenger_type": "ADT",
+              "affiliation_category": "B",
+              "document_number": "1216719188",
+              "document_type": "4325"
+            },
+
+            {
+              "passenger_type": "ADT",
+              "affiliation_category": "A",
+              "document_number": "39163304",
+              "document_type": "4325"
+            },
+            {
+              "passenger_type": "ADT",
+              "affiliation_category": "",
+              "document_number": "",
+              "document_type": ""
+            },
+
+            {
+              "passenger_type": "CNN",
+              "passenger_date": "",
+              "affiliation_category": "",
+              "document_type": 0,
+              "document_number": 0
+            },
+             {
+              "passenger_type": "CNN",
+              "passenger_date": "",
+              "affiliation_category": "",
+              "document_type": 0,
+              "document_number": 0
+            }
+          ],
+          "affiliated_provider": "SAPComfama",
+          "loyalty_points": 0,
+          "provider_points": "",
+          "name_compounds": false,
+          "passenger_adult": 5,
+          "passenger_child": 1,
+          "passenger_infant": 0,
+          "quantity_room": 3,
+          "hotel_select_map": false,
+          "hotel_micro_stays": false,
+          "hotel_name": "",
+          "hotel_index": 0,
+          "room_index": 0,
+          "air_type": "",
+          "bus_type": "",
+          "air_index": 0,
+          "airline_code": "",
+          "extra_name": "",
+          "extra_index": 0,
+          "car_index": 0,
+          "car_pay_index": 0,
+          "bus_index": 0,
+          "branch_name": "regla_descuento_afiliados",
+          "branch_code": "des_afilia",
+          "bundle": true,
+          "language_code": "es-CO",
+          "configuration_type": [
+            {
+              "provider_type": "ExpediaRapid",
+              "provider_package": [],
+              "upsell_type": 0,
+              "upsell_name": [],
+              "code_line_cabin": 0,
+              "air_private_rate": false,
+              "hotel_category": 0,
+              "refundable_type": 1,
+              "sort_by_price": 0,
+              "amenities": [],
+              "rental_company_type": "",
+              "rental_pay_to_arrival": false,
+              "rental_car_category": "",
+              "company_bus_type": "",
+              "ancillary_type": false,
+              "seat_map_type": false,
+              "hotel_pay_to_arrival": false,
+              "pre_included": false,
+              "extra_cross_selling": false,
+              "extra_provider_cross": "local",
+              "auto_cross_selling": false,
+              "auto_provider_cross": "",
+              "assists": false,
+              "assists_name": ""
+            }
+          ],
+          "display_options": [
+            {
+              "payment_type": 0,
+              "payment_gateway": 0,
+              "payment_card_number": "",
+              "partial_payment": false,
+              "partial_payment_count": "",
+              "cancellation_type": 1,
+              "confirmation_type": 1,
+              "cancellation_mode": 1,
+              "payment_status": 0,
+              "reservation_status": 1
+            }
+          ],
+          "display_validation": [
+            {
+              "validation_rule": true,
+              "validation_total": true,
+              "stop_page_results": false,
+              "stop_page_passenger": false,
+              "stop_page_payments": false,
+              "stop_page_display": false
+            }
+          ]
+        }
+      }
+    ]
+  }

@@ -1,0 +1,81 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<add key="currentCulture" value="es-CO"/>
+	<add key="PostUrl" value=""/>
+	<add key="LocalImagesUrl" value="https://preprod.netactica.com/Netadmin/Images/Upload"/>
+	<add key="RemoteLoginUrl" value=""/>
+	<!--Si esta en TRUE, se requerira la informacion de los pasajeros de los Extras. Caso contrario reservaran los extras con la informacion del pasajero titular-->
+	<add key="RequireExtraPaxInfoOnPackage" value="false"/>
+	<!--Si esta en TRUE, se mostraran como opcional los campos email, telefono y numero de documento de los pasajeros no titulares para hoteles.-->
+	<!--La fecha de nacimiento se mostrara como opcional solo para adultos-->
+	<add key="OptionalFieldsHotelPaxInfo" value="false"/>
+	<add key="ShowAddNewItemsPackage" value="false"/>
+	<!--Esto indica si se deben mostrar o no los upgrades de habitaciones de Hotel en la vista de resultados. -->
+	<add key="ShowRoomTypesInResults" value="true"/>
+	<!--esto indica que en el motor de busqueda agrega los seniors en las opciones -->
+	<add key="SearchSeniors" value="true"/>
+	<add key="PAI" value="BOG"/>
+	<!--Esto oculta el corazon de las cotizaciones-->
+	<add key="HideQuotes" value="false"/>
+	<!--Esto activa/inactiva la venta cruzada incluyendo autos en aéreos-->
+	<add key="AirCrossellingDisabled" value="false"/>
+	<!--Esto activa/inactiva la venta cruzada incluyendo autos en hoteles -->
+	<add key="HotelCrossellingDisabled" value="false"/>
+	<add key="ShowGoogleMapsDetails" value="true"/>
+	<add key="ShowCorporateMiles" value="true"/>
+	<add key="ReUsePassengers" value="true"/>
+	<!--<add key="UseAssistanceFlow" value="true"/>-->
+	<add key="RoomNumberInLocalReservations" value="true"/>
+	<!--Indica que si es un operador de la agencia podrá cambiar el # de las habitaciones de las reservas de hotel-->
+	<add key="RequestHotelRoomNumberOnPaxPage" value="false"/>
+	<add key="EconomicAssistChecked" value="false"/>
+	<!--Esto activa/inactiva la seleccion de la asistencia mas económica por defecto en página de pasajeros | assistcard -->
+	<add key="HideAffiliateBirthdate" value="true"/>
+	<!--Esta clave sirve para ocultar la fecha de nacimiento de los pasajeros si fueron validados como afiliados solo desde CMS -->
+	<!--Esta clave sirve para autocompletar el apellido y fecha de nacimiento de los pasajeros si fueron validados como afiliados -->
+	<add key="AutoCompleteAffiliateData" value="true"/>
+	<!-- <add key="UseAssistanceFlow" value="true"/> -->
+
+	<ExtraDefaultSellSettings enabled="false">
+		<ExtraDefaultSell destination="MDE">
+			<Extra ProductCode="PROTEPI" SearchType="Package" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="Package" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="Package" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="PackageAir" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="PackageAir" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="PackageAir" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="PackageHotel" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="PackageHotel" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="PROTEPI" SearchType="PackageHotel" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+		</ExtraDefaultSell>
+		<ExtraDefaultSell destination="SMR">
+			<Extra ProductCode="EXTPIAFI1" SearchType="Package" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="Package" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="Package" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="PackageAir" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="PackageAir" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="PackageAir" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="PackageHotel" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="PackageHotel" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="EXTPIAFI1" SearchType="PackageHotel" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+		</ExtraDefaultSell>
+		<ExtraDefaultSell destination="PEI">
+			<Extra ProductCode="3100" SearchType="OnlyBus" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="3100" SearchType="OnlyBus" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="3100" SearchType="OnlyBus" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="3100" SearchType="PackageBus" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="3100" SearchType="PackageBus" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="3100" SearchType="PackageBus" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+		</ExtraDefaultSell>
+		<ExtraDefaultSell destination="MV8">
+			<Extra ProductCode="MV8" SearchType="PackageHotel" BookingSource="Local" PaxType="ADT" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="MV8" SearchType="PackageHotel" BookingSource="Local" PaxType="CNN" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+			<Extra ProductCode="MV8" SearchType="PackageHotel" BookingSource="Local" PaxType="INF" DuplicateQuantity="1" DuplicateQuantityNights="1"/>
+		</ExtraDefaultSell>
+	</ExtraDefaultSellSettings>
+	<MailSettings>
+		<smtpClient port="587" enableSsl="false" host="smtp.sendgrid.net"/>
+		<senderAccount from="infofortest@gmail.com" displayName="Netactica" username="netsuite" password="Catmandu16"/>
+	</MailSettings>
+</settings>

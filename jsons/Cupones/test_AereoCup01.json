@@ -1,0 +1,246 @@
+{
+	"web_browser": "local",
+	"environment": 2,
+	"case_name": "Reserva de vuelo RT con proveedor LatamNDC aerolinea LA 2ADT 2CNN emitiendo manual en efectivo y cancelando boletos aéreos",
+	"case_code": "TC00102",
+	"login": {
+		"user_type": 1,
+		"login_type": 1,
+		"username": "amatista",
+		"password": "Autom@-2",
+		"user_service": "regresion"
+	},
+	"netadmin": [
+		{
+			"admin_rule_business": {
+				"rule_type": 0,
+				"rule_name": "",
+				"rule_active": false,
+				"rule_deactivate_rules": false,
+				"rule_active_change": false,
+				"rule_active_excl_discount": false,
+				"rule_active_max_discount": false,
+				"rule_active_external_points": false,
+				"type_amount": "",
+				"rule_amount": 0,
+				"type_currency": "",
+				"rule_iva": false,
+				"rule_iva_amount": 0,
+				"rule_text_body": "",
+				"rule_img_url": "",
+				"rule_date_from": "",
+				"rule_date_to": "",
+				"rule_pay_date_to": "",
+				"rule_date_from_restrictions": "",
+				"rule_date_to_restrictions": "",
+				"rule_multi_dest_active": false,
+				"rule_couple_active": false,
+				"rule_fee_promo_active": false,
+				"rule_guaranteed_price_active": false,
+				"rule_sales_quotas": 0,
+				"rule_claim_quotas": 0,
+				"rule_priority_promo": 0,
+				"rule_promo_pay_form": "",
+				"rule_promo_pay_percentage": 0,
+				"rule_air_fare_action": "",
+				"rule_air_fare_code": "",
+				"rule_air_fare_title": "",
+				"rule_air_fare_sub_title": "",
+				"rule_air_fare_detail": "",
+				"rule_air_fare_type": "",
+				"rule_air_fare_group": "",
+				"rule_air_fare_sub_group": "",
+				"rule_air_fare_amount": 0,
+				"rule_value_points": 0,
+				"type_amount_fee_point": "",
+				"rule_amount_fee_point": 0,
+				"rule_amount_max_discount": 0,
+				"rule_amount_over_commission": 0,
+				"type_tour_code": "",
+				"rule_other_commands": "",
+				"rule_active_accumulative": false,
+				"rule_discount_with_taxes": false,
+				"rule_discount_over_cost": false,
+				"rule_discount_over_pax_price": false,
+				"rule_discount_category": "",
+				"rule_discount_type": "",
+				"rule_discount_night_amount": 0,
+				"rule_discount_night_recursive": false,
+				"rule_code_campaign": "",
+				"rule_value_esp": "",
+				"rule_value_eng": "",
+				"rule_value_pt": "",
+				"rule_checks_user_acceptance": false,
+				"rule_checks_sms_acceptance": false,
+				"rule_checks_email_acceptance": false,
+				"rule_checks_data_acceptance": false,
+				"rule_campaign_state": "",
+				"rule_campaign_limit_type": "",
+				"rule_campaign_limit_amount": 0,
+				"rule_campaign_type": "",
+				"rule_campaign_quantity": 0,
+				"rule_campaign_private_config": "",
+				"rule_campaign_profile_group": 0,
+				"rule_campaign_private_quantity": 0,
+				"type_product_condition_rule": {
+					"text_condition": [
+						"",
+						""
+					],
+					"rule_symbol": ""
+				},
+				"type_supplier_condition_rule": {
+					"text_condition": [
+						"",
+						""
+					],
+					"rule_symbol": ""
+				},
+				"type_booking_source_condition_rule": {
+					"text_condition": [
+						"",
+						""
+					],
+					"rule_symbol": ""
+				},
+				"type_airline_condition_rule": {
+					"text_condition": [
+						"",
+						""
+					],
+					"rule_symbol": ""
+				},
+				"type_branch_condition_rule": {
+					"text_condition": [
+						"",
+						""
+					],
+					"rule_symbol": ""
+				},
+				"type_sales_channels_rule": {
+					"text_condition": [
+						"",
+						""
+					],
+					"rule_symbol": ""
+				},
+				"type_destination_country_rule": {
+					"text_condition": [
+						"",
+						""
+					],
+					"rule_symbol": ""
+				}
+			},
+			"booking_tree": {
+				"booking_enabled": true,
+				"booking_enabled_new": false
+			}
+		}
+	],
+	"netfulfillment": [
+		{
+			"admin_nff": {
+				"option_type": 1
+			}
+		}
+	],
+	"booking": [
+		{
+			"booking_type": {
+				"option_booking_type": 3,
+                "associate_reservation": 0,
+				"product_type": 1,
+				"front_type": 1,
+				"origen": ["MDE"],
+				"destination": ["BOG"],
+				"date_from": [120],
+				"time_from": [],
+				"date_to": [121],
+				"time_to": [],
+				"static_content": false,
+				"affiliated_passengers": false,
+                "coupon_code": "CUPONES_PORCENTUAL",
+				"loyalty_points": false,
+				"name_compounds": false,
+				"passenger_adult": 2,
+				"passenger_child": 2,
+				"passenger_infant": 0,
+				"quantity_room": 0,
+				"hotel_select_map": false,
+				"hotel_name": "",
+				"hotel_index": 0,
+				"room_index": 0,
+				"air_type": 2,
+				"bus_type": 0,
+				"air_index": 1,
+				"airline_code": "LA",
+				"extra_name": "",
+				"extra_index": 0,
+				"car_index": 0,
+				"car_pay_index": 0,
+				"bus_index": 0,
+				"branch_name": "regla_descuento_afiliados",
+                "branch_code": "des_afilia",
+				"bundle": false,
+				"language_code": "es-CO",
+				"configuration_type": [
+					{
+						"provider_type": "LatamNDC_CL",
+						"upsell_type": 3,
+						"upsell_name": [],
+						"code_line_cabin": 0,
+						"air_private_rate": false,
+						"air_flight_scales": 0,
+						"air_baggage_flight": 0,
+						"air_type_alliance": "",
+						"fare_families_air": "",
+						"apply_ancillary": false,
+						"type_ancillaries": {},
+						"apply_seat_map": false,
+						"seat_map_type": {},
+						"amenities": [],
+						"hotel_category": 0,
+						"refundable_type": 0,
+						"sort_by_price": 0,
+						"rental_company_type": "",
+						"rental_pay_to_arrival": false,
+						"rental_car_category": "",
+						"company_bus_type": "",
+						"hotel_pay_to_arrival": false,
+						"pre_included": false,
+						"extra_cross_selling": false,
+						"extra_provider_cross": "",
+						"auto_cross_selling": false,
+						"auto_provider_cross": "",
+						"assists": false,
+						"assists_name": ""
+					}
+				],
+				"display_options": [
+					{
+						"payment_type": 1,
+						"payment_gateway": 0,
+						"partial_payment": false,
+						"partial_payment_count": 0,
+						"cancellation_type": 3,
+						"confirmation_type": 2,
+						"cancellation_mode": 1,
+						"payment_status": 1,
+						"reservation_status": 4
+					}
+				],
+				"display_validation": [
+					{
+						"validation_rule": true,
+						"validation_total": true,
+						"stop_page_results": false,
+						"stop_page_passenger": false,
+						"stop_page_payments": false,
+						"stop_page_display": false
+					}
+				]
+			}
+		}
+	]
+}
