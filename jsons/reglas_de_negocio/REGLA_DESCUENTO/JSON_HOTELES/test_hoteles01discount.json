@@ -1,0 +1,142 @@
+{
+    "web_browser": "local",
+    "environment": 2,
+    "case_name": "Prueba DESCUENTO con producto HOTELES, con ocupancia de 1 ADT, 0 CNN y 0 INF, 1 ROOM,  Cancelation Itinerario, Confirmation Itinerario, MDE, SUCURSAL: 'sucu_discount_monto_porcentual_con_impuestos', REGLA: descuento_monto_porcentual_con_impuesto, Revisión comparando el valor que se ve en el display con el esperado calculado por amatista",
+    "case_code": "TC0001",
+    "login": {
+      "user_type": 1,
+      "login_type": 1,
+      "username": "amatista",
+      "password": "Autom@-2",
+      "user_service": "regresionam"
+    },
+    "netadmin": [
+      {
+        "admin_rule_business": {},
+        "booking_tree": {
+          "booking_enabled": false,
+          "booking_enabled_new": true
+        }
+      }
+    ],
+    "netfulfillment": [
+      {
+        "admin_nff": {
+          "option_type": 1
+        }
+      }
+    ],
+    "booking": [
+      {
+        "booking_type": {
+          "option_booking_type": 3,
+          "associate_reservation": 3,
+          "product_type": 2,
+          "front_type": 1,
+          "origen": [],
+          "destination": ["MIA"],
+          "date_from": [
+            111
+          ],
+          "time_from": [],
+          "date_to": [
+            114
+          ],
+          "time_to": [],
+          "static_content": false,
+          "affiliated_passengers": false,
+          "affiliated_passengers_data": [],
+          "affiliated_provider": "",
+          "coupon_code": "",
+          "loyalty_points": 0,
+          "provider_points": "",
+          "applied_rules": [
+          {"name_rule": "descuento_monto_porcentual_con_impuestos", "index_rule": 3}
+          ],
+          "name_compounds": false,
+          "passenger_adult": 1,
+          "passenger_child": 0,
+          "passenger_infant": 0,
+          "quantity_room": 1,
+          "hotel_select_map": false,
+          "hotel_micro_stays": false,
+          "hotel_name": "",
+          "hotel_index": 2,
+          "room_index": 0,
+          "air_type": "",
+          "bus_type": "",
+          "air_index": 0,
+          "airline_code": "",
+          "extra_name": "",
+          "extra_index": 0,
+          "car_index": 1,
+          "car_pay_index": 0,
+          "bus_index": 0,
+          "branch_name": "sucu_discount_monto_porcentual_con_impuestos",
+          "branch_code": "rdispconim",
+          "bundle": false,
+          "language_code": "es-CO",
+          "configuration_type": [
+            {
+              "provider_type": "",
+              "provider_package": [],
+              "upsell_type": 0,
+              "upsell_name": [],
+              "code_line_cabin": 0,
+              "air_private_rate": false,
+              "hotel_category": 0,
+              "refundable_type": 1,
+              "sort_by_price": 0,
+              "amenities": [
+                {
+
+                },
+                {
+
+                }
+              ],
+              "rental_company_type": "",
+              "rental_pay_to_arrival": false,
+              "rental_car_category": "",
+              "company_bus_type": "",
+              "ancillary_type": false,
+              "seat_map_type": false,
+              "hotel_pay_to_arrival": false,
+              "pre_included": false,
+              "extra_cross_selling": false,
+              "extra_provider_cross": "",
+              "auto_cross_selling": false,
+              "auto_provider_cross": "",
+              "assists": false,
+              "assists_name": ""
+            }
+          ],
+          "display_options": [
+            {
+              "payment_type": 2,
+              "payment_gateway": 2,
+              "payment_card_number": "",
+              "partial_payment": false,
+              "partial_payment_count": "",
+              "cancellation_type": 4,
+              "confirmation_type": 5,
+              "cancellation_mode": 2,
+              "payment_status": 0,
+              "reservation_status": 1
+            }
+          ],
+          "display_validation": [
+            {
+              "validation_rule": true,
+              "validation_total": true,
+              "stop_page_results": false,
+              "stop_page_passenger": false,
+              "stop_page_payments": false,
+              "stop_page_display": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+
