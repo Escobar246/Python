@@ -29,7 +29,7 @@
     "booking": [
       {
         "booking_type": {
-          "option_booking_type": 3,
+          "option_booking_type": 1,
           "associate_reservation": 3,
           "product_type": 2,
           "front_type": 1,
@@ -69,8 +69,8 @@
           "car_index": 0,
           "car_pay_index": 0,
           "bus_index": 0,
-          "branch_name": "regla_descuento_afiliados",
-          "branch_code": "des_afilia",
+          "branch_name": "cupones_monto_fijo",
+          "branch_code": "cuponfijo",
           "bundle": false,
           "language_code": "es-CO",
           "configuration_type": [

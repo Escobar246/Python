@@ -1,7 +1,7 @@
 {
     "web_browser": "local",
     "environment": 2,
-    "case_name": "Prueba CUPONES con producto HOTELES, con ocupancia de 5 ADT, 2 CNN y 0 INF, 4 ROOM, MIA, SUCURSAL regla_descuento_afiliados, CUPONES MONTO PORCENTUAL con impuestos incluidos",
+    "case_name": "Prueba CUPONES con producto HOTELES, con ocupancia de 5 ADT, 2 CNN y 0 INF, 4 ROOM, MIA, SUCURSAL cupones_monto_porcentual, CUPONES MONTO PORCENTUAL con impuestos incluidos",
     "case_code": "TCEH0001",
     "login": {
       "user_type": 1,
@@ -69,8 +69,8 @@
           "car_index": 0,
           "car_pay_index": 0,
           "bus_index": 0,
-          "branch_name": "regla_descuento_afiliados",
-          "branch_code": "des_afilia",
+          "branch_name": "cupones_monto_porcentual",
+          "branch_code": "cuponporce",
           "bundle": true,
           "language_code": "es-CO",
           "configuration_type": [

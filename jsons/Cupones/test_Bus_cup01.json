@@ -1,7 +1,7 @@
 {
     "web_browser": "local",
     "environment": 2,
-    "case_name": "Flujo de bus RT seleccionando 3ADT 6CNN 1INF pago pse confirmacion por online y cancelacion manual proveedor local compañia 'FA', SUCURSAL 'regla_descuento_afiliados', CUPONES DESCUENTO PORCENTUAL",
+    "case_name": "Flujo de bus RT seleccionando 3ADT 3CNN 0INF pago pse confirmacion por online y cancelacion manual proveedor local, SUCURSAL 'cupones_monto_porcentual', CUPONES MONTO PORCENTUAL incluyendo impuestos",
     "case_code": "TC00062",
     "login": {
        "user_type": 1,
@@ -159,7 +159,7 @@
              "date_to": [92],
              "time_to": [],
              "static_content": false,
-             "affiliated_passengers": true,
+             "affiliated_passengers": false,
              "affiliated_passengers_data": [],
              "affiliated_provider": "",
              "coupon_code": "CUPONES_PORCENTUAL",
@@ -184,8 +184,8 @@
              "car_index": 0,
              "car_pay_index": 0,
              "bus_index": 3,
-             "branch_name": "regla_descuento_afiliados",
-             "branch_code": "des_afilia",
+             "branch_name": "cupones_monto_porcentual",
+             "branch_code": "cuponporce",
              "bundle": false,
              "language_code": "es-CO",
              "configuration_type": [
@@ -211,7 +211,7 @@
                    "rental_company_type": "",
                    "rental_pay_to_arrival": false,
                    "rental_car_category": "",
-                   "company_bus_type": "FA",
+                   "company_bus_type": "",
                    "hotel_pay_to_arrival": false,
                    "pre_included": false,
                    "extra_cross_selling": false,
@@ -224,7 +224,7 @@
              ],
              "display_options": [
                 {
-                   "payment_type": 4,
+                   "payment_type": 2,
                    "payment_gateway": 0,
                    "payment_card_number": "",
                    "partial_payment": false,

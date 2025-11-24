@@ -1,7 +1,7 @@
 {
     "web_browser": "local",
     "environment": 2,
-    "case_name": "Prueba afiliados con producto HOTELES, con ocupancia de 6 ADT, 3 CNN y 0 INF, 2 ROOM, MDE, sucursal ComfamaHoteles ",
+    "case_name": "Prueba afiliados con producto HOTELES, con ocupancia de 6 ADT, 3 CNN y 0 INF, 2 ROOM, MDE, sucursal regla_descuento_afiliados ",
     "case_code": "TCAH0001",
     "login": {
       "user_type": 1,
